@@ -18,12 +18,12 @@ function AddExperience2(props) {
   return (
     <>
       <Box marginLeft="40px">
-        <Text fontSize="48px" fontWeight="bold" paddingY="20px">
-          Add an Experience
-        </Text>
-        <Text>Step 2</Text>
-        <Flex justify="space=between">
+        <Flex justify="space=between" align="center">
           <Stack spacing="16px" width="100%" marginRight="40px">
+            <Text fontSize="48px" fontWeight="bold" paddingY="20px">
+              Add an Experience
+            </Text>
+            <Text>Step 2</Text>
             <FormControl>
               <FormLabel htmlFor="guest-desc" marginTop="20px">
                 How many moms can you take?
@@ -55,6 +55,7 @@ function AddExperience2(props) {
             height="700px"
             maxWidth="600px"
             objectFit="cover"
+            display={{ sm: "none", md: "block" }}
           />
         </Flex>
       </Box>

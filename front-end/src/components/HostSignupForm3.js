@@ -14,10 +14,10 @@ import { Link } from "react-router-dom";
 function HostSignupForm3(props) {
   return (
     <Box marginLeft="40px">
-      <Flex justify="space=between">
+      <Flex justify="space=between" align="center">
         <Stack spacing="16px" width="100%" marginRight="40px">
           <FormControl>
-            <FormLabel htmlFor="self-description" marginTop="200px">
+            <FormLabel htmlFor="self-description">
               Describe yourself to guests
             </FormLabel>
             <Textarea
@@ -53,6 +53,7 @@ function HostSignupForm3(props) {
           height="700px"
           maxWidth="600px"
           objectFit="cover"
+          display={{ sm: "none", md: "block" }}
         />
       </Flex>
     </Box>

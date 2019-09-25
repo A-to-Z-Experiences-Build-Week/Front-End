@@ -20,8 +20,8 @@ function MomSignupForm(props) {
         <Heading as="h1" size="lg" marginX="40px">
           Sign up Form
         </Heading>
-        <Flex justify="space-between">
-          <Stack spacing="16px" width="50%" marginX="40px">
+        <Flex justify="space-between" align="center">
+          <Stack spacing="16px" marginX="40px">
             <FormControl>
               <FormLabel htmlFor="fname">First name</FormLabel>
               <Input type="text" id="fname" />
@@ -70,6 +70,7 @@ function MomSignupForm(props) {
             height="700px"
             maxWidth="600px"
             objectFit="cover"
+            display={{ sm: "none", md: "block" }}
           />
         </Flex>
       </Box>

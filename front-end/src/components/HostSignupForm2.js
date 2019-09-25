@@ -16,10 +16,10 @@ import { Link } from "react-router-dom";
 function HostSignupForm2(props) {
   return (
     <Box marginLeft="40px">
-      <Flex justify="space-between">
+      <Flex justify="space-between" align="center">
         <Stack spacing="16px">
           <FormControl>
-            <FormLabel htmlFor="citylocation" marginTop="200px">
+            <FormLabel htmlFor="citylocation">
               Which City will you host your experience in?
             </FormLabel>
             <Input type="text" id="citylocation" placeholder="Enter city" />
@@ -57,6 +57,7 @@ function HostSignupForm2(props) {
           height="700px"
           maxWidth="600px"
           objectFit="cover"
+          display={{ sm: "none", md: "block" }}
         />
       </Flex>
     </Box>

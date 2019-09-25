@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 function HostSignupForm4(props) {
   return (
     <Box marginLeft="40px">
-      <Flex justify="space-between">
+      <Flex justify="space-between" align="center">
         <Stack spacing="16px" width="100%" marginX="40px" marginTop="40px">
           <FormControl>
             <FormLabel htmlFor="fname">First name</FormLabel>
@@ -62,6 +62,7 @@ function HostSignupForm4(props) {
           height="700px"
           maxWidth="600px"
           objectFit="cover"
+          display={{ sm: "none", md: "block" }}
         />
       </Flex>
     </Box>

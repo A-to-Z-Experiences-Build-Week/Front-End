@@ -16,12 +16,12 @@ function AddExperience(props) {
   return (
     <>
       <Box marginLeft="40px">
-        <Text fontSize="48px" fontWeight="bold" paddingY="20px">
-          Add an Experience
-        </Text>
-        <Text>Step 1</Text>
-        <Flex justify="space=between">
+        <Flex justify="space=between" align="center">
           <Stack spacing="16px" width="100%" marginRight="40px">
+            <Text fontSize="48px" fontWeight="bold" paddingY="20px">
+              Add an Experience
+            </Text>
+            <Text>Step 1</Text>
             <FormControl>
               <FormLabel htmlFor="experience-name" marginTop="20px">
                 What is your experience?
@@ -59,6 +59,7 @@ function AddExperience(props) {
             height="700px"
             maxWidth="600px"
             objectFit="cover"
+            display={{ sm: "none", md: "block" }}
           />
         </Flex>
       </Box>
