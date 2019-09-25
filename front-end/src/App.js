@@ -21,6 +21,7 @@ import Dashboard from "./components/Dashboard";
 import HostSignupForm2 from "./components/HostSignupForm2";
 import HostSignupForm3 from "./components/HostSignupForm3";
 import HostSignupForm4 from "./components/HostSignupForm4";
+import MomSignupPage from "./components/MomSignupPage";
 
 // import "./styles.css";
 
@@ -33,7 +34,7 @@ function App() {
 
       <Route path="/login" component={Login} />
       <Route exact path="/" component={Homepage} />
-      <Route path="/get-experience" component={MomSignupForm} />
+      <Route path="/get-experience" component={MomSignupPage} />
       <Route path="/give-experience" component={HostSignupForm} />
       <Route path="/host-signup" component={HostSignupForm2} />
       <Route path="/host-signup2" component={HostSignupForm3} />
