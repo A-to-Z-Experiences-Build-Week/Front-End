@@ -15,6 +15,7 @@ import Homepage from "./components/Homepage";
 import MomSignupForm from "./components/MomSignupForm";
 import HostSignupForm from "./components/HostSignupForm";
 import Search from "./components/Search";
+import Dashboard from "./components/Dashboard";
 // import HostSignupForm2 from "./components/HostSignupForm2";
 // import HostSignupForm3 from "./components/HostSignupForm3";
 // import HostSignupForm4 from "./components/HostSignupForm4";
@@ -32,6 +33,7 @@ function App() {
       <Route exact path="/" component={Homepage} />
       <Route path="/get-experience" component={MomSignupForm} />
       <Route path="/give-experience" component={HostSignupForm} />
+      <Route path="/dashboard" component={Dashboard} />
     </ThemeProvider>
   );
 }
