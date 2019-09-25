@@ -24,7 +24,7 @@ function HostSignupForm(props) {
           </Button>
         </Box>
         <Image
-          src="https://images.unsplash.com/photo-1554731340-80eb1d6cec50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          src="https://images.unsplash.com/photo-1526277015674-026cb84653ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
           width="100%"
           height="700px"
           maxWidth="600px"
