@@ -1,16 +1,20 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import { ThemeProvider, CSSReset, Text } from "@chakra-ui/core";
 
 // Components 
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Login from "./components/Login";
-import ExperienceCard from "./components/ExperienceCard";
-import ExperienceView from "./components/ExperienceView";
+import PrivateRoute from "./components/PrivateRoute";
+import Dashboard from "./components/Dashboard";
+// import ExperienceCard from "./components/ExperienceCard";
+// import ExperienceView from "./components/ExperienceView";
 import MomSignupForm from "./components/MomSignupForm";
 import HostSignupForm from "./components/HostSignupForm";
-import HostSignupForm2 from "./components/HostSignupForm2";
-import HostSignupForm3 from "./components/HostSignupForm3";
-import HostSignupForm4 from "./components/HostSignupForm4";
+// import HostSignupForm2 from "./components/HostSignupForm2";
+// import HostSignupForm3 from "./components/HostSignupForm3";
+// import HostSignupForm4 from "./components/HostSignupForm4";
 
 // import "./styles.css";
 
@@ -21,7 +25,7 @@ function App() {
       {/* <Nav bg="red.300" />  */}
         <Header />
         <Route path="/login" component={Login} />
-        <PrivateRoute exact path="/userDashboard" component={Dashboard} />
+        <Route exact path="/userDashboard" component={Dashboard} />
         <Route path="/get-experience" component={MomSignupForm} />
         <Route path="/give-experience" component={HostSignupForm} />
     

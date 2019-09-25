@@ -1,8 +1,8 @@
 import React from "react";
-import Nav from "../Nav";
-import Search from "../Search";
+import Nav from "./Nav";
+// import Search from "./Search";
 import { Flex, Stack } from "@chakra-ui/core";
-import Logo from "./Logo";
+// import Logo from "./Logo";
 
 function Header(props) {
   return (
@@ -14,8 +14,8 @@ function Header(props) {
         align="center"
       >
         <Stack isInline spacing="40px">
-          <Logo height="32px" />
-          <Search />
+          {/* <Logo height="32px" /> */}
+          {/* <Search /> */}
         </Stack>
         <Nav color="teal.600" />
       </Flex>

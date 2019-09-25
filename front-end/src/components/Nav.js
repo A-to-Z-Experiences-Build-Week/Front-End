@@ -6,6 +6,9 @@ import { Link } from "@chakra-ui/core";
 function Nav(props) {
   return (
     <Stack isInline spacing="40px" padding="10px" justify="flex-end" {...props}>
+     <Link as={RouterLink} to="login">
+     Login
+     </Link>
       <Link as={RouterLink} to="/">
         Home
       </Link>
