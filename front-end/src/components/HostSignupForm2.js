@@ -11,6 +11,7 @@ import {
   Button,
   Box
 } from "@chakra-ui/core";
+import { Link } from "react-router-dom";
 
 function HostSignupForm2(props) {
   return (
@@ -37,7 +38,15 @@ function HostSignupForm2(props) {
               <Radio value="service">A service(e.g massage, babysitting)</Radio>
             </RadioGroup>
           </FormControl>
-          <Button variantColor="teal" size="lg" width="100px">
+          <Button
+            as={Link}
+            to="/host-signup2"
+            variantColor="teal"
+            variant="solid"
+            size="lg"
+            marginTop="30px"
+            width="200px"
+          >
             Continue
           </Button>
         </Stack>

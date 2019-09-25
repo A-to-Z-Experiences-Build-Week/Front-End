@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Flex,
   Input,
@@ -11,36 +12,30 @@ import {
   Box
 } from "@chakra-ui/core";
 
-function AddExperience(props) {
+function AddExperience2(props) {
   return (
     <>
       <Box marginLeft="40px">
         <Text fontSize="48px" fontWeight="bold" paddingY="20px">
           Add an Experience
         </Text>
-        <Text>Step 1</Text>
+        <Text>Step 2</Text>
         <Flex justify="space=between">
           <Stack spacing="16px" width="100%" marginRight="40px">
             <FormControl>
-              <FormLabel htmlFor="experience-name" marginTop="20px">
-                What is your experience?
+              <FormLabel htmlFor="guest-desc" marginTop="20px">
+                How many moms can you take?
               </FormLabel>
-              <Input type="text" id="experience-name" />
+              <Input type="text" id="guest-desc" />
             </FormControl>
             <FormControl>
-              <FormLabel htmlFor="experience-location" marginTop="20px">
-                Where is it located?
+              <FormLabel htmlFor="experience-price" marginTop="20px">
+                How much would this cost?
               </FormLabel>
-              <Input type="text" id="experience-location" />
-            </FormControl>
-            <FormControl>
-              <FormLabel htmlFor="experience-description" marginTop="20px">
-                Describe the Experience
-              </FormLabel>
-              <Input type="text" id="experience-description" />
+              <Input type="text" id="eexperience-price" />
             </FormControl>
             <Button variantColor="teal" size="lg" width="100px">
-              Continue
+              Submit
             </Button>
           </Stack>
 
@@ -57,4 +52,4 @@ function AddExperience(props) {
   );
 }
 
-export default AddExperience;
+export default AddExperience2;

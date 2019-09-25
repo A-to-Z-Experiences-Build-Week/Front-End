@@ -1,6 +1,6 @@
 import React from "react";
 import ExperiencePreviewCard from "./ExperiencePreviewCard";
-import { Text, Heading, Button, Flex, Box } from "@chakra-ui/core";
+import { Text, Heading, Button, Flex, Box, Link } from "@chakra-ui/core";
 import { FaPlus } from "react-icons/fa";
 
 function Dashboard(props) {
@@ -9,7 +9,16 @@ function Dashboard(props) {
       <Box marginX="40px" marginTop="40px">
         <Flex justify="space-between">
           <Heading>Your Experiences</Heading>
-          <Button rightIcon={FaPlus} variantColor="teal" variant="outline">
+          {/* <Button rightIcon={FaPlus} variantColor="teal" variant="outline">
+            Create Experience
+          </Button> */}
+          <Button
+            as={Link}
+            rightIcon={FaPlus}
+            to="/add-experience"
+            variantColor="teal"
+            variant="outline"
+          >
             Create Experience
           </Button>
         </Flex>

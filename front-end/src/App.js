@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Homepage from "./components/Homepage";
+import AddExperience from "./components/AddExperience";
+import AddExperience2 from "./components/AddExperience2";
 
 //Remove forms
 // import ExperienceCard from "./components/ExperienceCard";
@@ -16,9 +18,9 @@ import MomSignupForm from "./components/MomSignupForm";
 import HostSignupForm from "./components/HostSignupForm";
 import Search from "./components/Search";
 import Dashboard from "./components/Dashboard";
-// import HostSignupForm2 from "./components/HostSignupForm2";
-// import HostSignupForm3 from "./components/HostSignupForm3";
-// import HostSignupForm4 from "./components/HostSignupForm4";
+import HostSignupForm2 from "./components/HostSignupForm2";
+import HostSignupForm3 from "./components/HostSignupForm3";
+import HostSignupForm4 from "./components/HostSignupForm4";
 
 // import "./styles.css";
 
@@ -33,7 +35,12 @@ function App() {
       <Route exact path="/" component={Homepage} />
       <Route path="/get-experience" component={MomSignupForm} />
       <Route path="/give-experience" component={HostSignupForm} />
+      <Route path="/host-signup" component={HostSignupForm2} />
+      <Route path="/host-signup2" component={HostSignupForm3} />
+      <Route path="/host-signup3" component={HostSignupForm4} />
       <Route path="/dashboard" component={Dashboard} />
+      <Route path="/add-experience" component={AddExperience} />
+      <Route path="/add-experience2" component={AddExperience2} />
     </ThemeProvider>
   );
 }

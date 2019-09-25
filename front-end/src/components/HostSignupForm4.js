@@ -11,63 +11,48 @@ import {
   Image,
   Box
 } from "@chakra-ui/core";
+import { Link } from "react-router-dom";
 
 function HostSignupForm4(props) {
   return (
-    <Box>
+    <Box marginLeft="40px">
       <Flex justify="space-between">
         <Stack spacing="16px" width="100%" marginX="40px" marginTop="40px">
           <FormControl>
             <FormLabel htmlFor="fname">First name</FormLabel>
-            <Input
-              type="text"
-              id="fname"
-              placeholder="Enter your first name here..."
-            />
+            <Input type="text" id="fname" />
           </FormControl>
           <FormControl>
             <FormLabel htmlFor="lname">Last name</FormLabel>
-            <Input
-              type="text"
-              id="lname"
-              placeholder="Enter your last name here..."
-            />
+            <Input type="text" id="lname" />
           </FormControl>
 
           <FormControl>
             <FormLabel htmlFor="phone">Phone number</FormLabel>
-            <Input
-              type="phone"
-              id="phone"
-              placeholder="Enter your phone number here..."
-            />
+            <Input type="phone" id="phone" />
           </FormControl>
 
           <FormControl>
             <FormLabel htmlFor="email">Email address</FormLabel>
-            <Input
-              type="email"
-              id="email"
-              placeholder="Enter your email address here..."
-            />
+            <Input type="email" id="email" />
           </FormControl>
           <FormControl>
             <FormLabel htmlFor="password">Password</FormLabel>
-            <Input
-              type="password"
-              id="password"
-              placeholder="Enter your password here..."
-            />
+            <Input type="password" id="password" />
           </FormControl>
           <FormControl>
             <FormLabel htmlFor="cpassword">Confirm Password</FormLabel>
-            <Input
-              type="password"
-              id="cpassword"
-              placeholder="Confirm your password..."
-            />
+            <Input type="password" id="cpassword" />
           </FormControl>
-          <Button variantColor="teal" size="lg" width="100px">
+          <Button
+            as={Link}
+            to="/dashboard"
+            variantColor="teal"
+            variant="solid"
+            size="lg"
+            marginTop="30px"
+            width="200px"
+          >
             Submit
           </Button>
         </Stack>
