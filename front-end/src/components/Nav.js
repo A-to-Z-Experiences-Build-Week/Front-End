@@ -1,26 +1,26 @@
 import React from "react";
-import { Flex, Box, Stack } from "@chakra-ui/core";
-
-
-// Need to add in NavLinks does it work with chakra?
-
+import { Box, Stack } from "@chakra-ui/core";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@chakra-ui/core";
 
 function Nav(props) {
   return (
-    <Stack
-      bg="gray.200"
-      isInline
-      spacing="40px"
-      padding="10px"
-      justify="flex-end"
-      {...props}
-    >
-      <Box>Your Booking</Box>
-      <Box>Favorite</Box>
-      <Box>Host</Box>
-      <Box>Help</Box>
+    <Stack isInline spacing="40px" padding="10px" justify="flex-end" {...props}>
+      <Link as={RouterLink} to="/">
+        Home
+      </Link>
+      <Box as={RouterLink} to="/give-experience">
+        Give Experience
+      </Box>
+      <Box as={RouterLink} to="/get-experience">
+        Get Experience
+      </Box>
+      <Box as={RouterLink} to="/contact-us">
+        Contact us
+      </Box>
     </Stack>
   );
 }
 
 export default Nav;
+
