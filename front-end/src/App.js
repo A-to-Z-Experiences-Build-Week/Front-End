@@ -1,8 +1,8 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React from "react";
+import { Route } from "react-router-dom";
 import { ThemeProvider, CSSReset, Text } from "@chakra-ui/core";
 
-// Components 
+// Components
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Login from "./components/Login";
@@ -14,6 +14,7 @@ import Dashboard from "./components/Dashboard";
 // import ExperienceView from "./components/ExperienceView";
 import MomSignupForm from "./components/MomSignupForm";
 import HostSignupForm from "./components/HostSignupForm";
+import Search from "./components/Search";
 // import HostSignupForm2 from "./components/HostSignupForm2";
 // import HostSignupForm3 from "./components/HostSignupForm3";
 // import HostSignupForm4 from "./components/HostSignupForm4";
@@ -25,12 +26,12 @@ function App() {
     <ThemeProvider>
       <CSSReset />
       {/* <Nav bg="red.300" />  */}
-        <Header />
-        <Route path="/login" component={Login} />
-        <Route exact path="/userDashboard" component={Dashboard} />
-        <Route path="/get-experience" component={MomSignupForm} />
-        <Route path="/give-experience" component={HostSignupForm} />
-    
+      <Header />
+      <Search />
+      <Route path="/login" component={Login} />
+      <Route exact path="/userDashboard" component={Dashboard} />
+      <Route path="/get-experience" component={MomSignupForm} />
+      <Route path="/give-experience" component={HostSignupForm} />
     </ThemeProvider>
   );
 }
