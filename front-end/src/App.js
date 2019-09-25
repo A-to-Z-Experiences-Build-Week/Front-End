@@ -13,7 +13,7 @@ import AddExperience2 from "./components/AddExperience2";
 
 //Remove forms
 // import ExperienceCard from "./components/ExperienceCard";
-// import ExperienceView from "./components/ExperienceView";
+import ExperienceView from "./components/ExperienceView";
 import MomSignupForm from "./components/MomSignupForm";
 import HostSignupForm from "./components/HostSignupForm";
 import Search from "./components/Search";
@@ -41,6 +41,7 @@ function App() {
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/add-experience" component={AddExperience} />
       <Route path="/add-experience2" component={AddExperience2} />
+      <Route path="/experience-view" component={ExperienceView} />
     </ThemeProvider>
   );
 }

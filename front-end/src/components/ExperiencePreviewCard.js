@@ -21,10 +21,6 @@ function ExperiencePreviewCard(props) {
           src="https://images.unsplash.com/photo-1530700131180-d43d9b8cc41f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1438&q=80"
         /> */}
       </Flex>
-      <Box paddingY="20px" bg="gray.100">
-        <Link marginLeft="30px">Edit</Link>
-        <Link marginLeft="20px">Delete</Link>
-      </Box>
     </Box>
   );
 }

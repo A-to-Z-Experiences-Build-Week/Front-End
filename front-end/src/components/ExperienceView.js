@@ -6,6 +6,7 @@ import {
   FaRegClock,
   FaUserFriends
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function IconText(props) {
   const { icon, children, ...rest } = props;
@@ -28,28 +29,30 @@ function ExperienceView(props) {
         objectFit="cover"
       />
       <Box marginLeft="40px" marginTop="10px">
-        <Text fontSize="xs">Hike</Text>
+        <Text fontSize="xs">Have plenty of fun</Text>
         <Text marginY="10px" fontSize="36px" fontWeight="bold">
-          Waterfall Hike
+          Food Tour
         </Text>
         <Grid gap="24px" templateColumns="80px 80px">
-          <IconText icon={FaMapMarkerAlt}>Location</IconText>
-          <IconText icon={FaCalendarAlt}>Availability</IconText>
-          <IconText icon={FaRegClock}>Time</IconText>
-          <IconText icon={FaUserFriends}>Guests</IconText>
+          <IconText icon={FaMapMarkerAlt}>Tokyo</IconText>
+          <IconText icon={FaCalendarAlt}>Availabile </IconText>
+          <IconText icon={FaRegClock}>10:00am</IconText>
+          <IconText icon={FaUserFriends}>4 Moms</IconText>
         </Grid>
         <Box>
           <Text marginY="20px" fontSize="24px" fontWeight="bold">
             What we'll do
           </Text>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            When you begin to imagine a trip to Tokyo the desire is not only to
+            see the eternal city, its monuments and art, but also to enjoy
+            excellent food, discover new flavors and satisfy the palate. My aim
+            is to give life to your dream accompanying you on a journey that
+            will satisfy all your senses. We catch up in front of Tokyo station.
+            Tokyo is a big City. However, I will message you with instruction
+            and photos, so no worries! After everyone arrives at the meeting
+            spot, I will explain about why I choose this town and where we go
+            today.
           </Text>
         </Box>
         <Box>
@@ -57,14 +60,17 @@ function ExperienceView(props) {
             About the Host
           </Text>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            I'm an Internationally recognied chef residing in Tokyo. I have been
+            to almost all Michelin Ramen stores in Tokyo. I am a tour guide in a
+            very special catacumba since it is the only one in Rome which
+            entrance is inside a church, for this reason it's a very special
+            place not busy. I have an affinity for stay at home moms and willing
+            to let them experience food in a most relaxing atmosphere.
           </Text>
+          <Box paddingY="20px">
+            <Link marginLeft="30px">Edit</Link>
+            <Link marginLeft="40px">Delete</Link>
+          </Box>
         </Box>
       </Box>
     </Flex>

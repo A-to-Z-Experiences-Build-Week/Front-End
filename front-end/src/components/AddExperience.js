@@ -10,6 +10,7 @@ import {
   FormLabel,
   Box
 } from "@chakra-ui/core";
+import { Link } from "react-router-dom";
 
 function AddExperience(props) {
   return (
@@ -39,7 +40,15 @@ function AddExperience(props) {
               </FormLabel>
               <Input type="text" id="experience-description" />
             </FormControl>
-            <Button variantColor="teal" size="lg" width="100px">
+            <Button
+              as={Link}
+              to="/add-experience2"
+              variantColor="teal"
+              variant="solid"
+              size="lg"
+              marginTop="30px"
+              width="200px"
+            >
               Continue
             </Button>
           </Stack>

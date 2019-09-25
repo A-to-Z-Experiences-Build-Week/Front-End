@@ -1,7 +1,8 @@
 import React from "react";
 import ExperiencePreviewCard from "./ExperiencePreviewCard";
-import { Text, Heading, Button, Flex, Box, Link } from "@chakra-ui/core";
+import { Text, Heading, Button, Flex, Box } from "@chakra-ui/core";
 import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Dashboard(props) {
   return (
