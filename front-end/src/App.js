@@ -7,7 +7,7 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
-import Dashboard from "./components/Dashboard";
+import Homepage from "./components/Homepage";
 
 //Remove forms
 // import ExperienceCard from "./components/ExperienceCard";
@@ -27,9 +27,9 @@ function App() {
       <CSSReset />
       {/* <Nav bg="red.300" />  */}
       <Header />
-      <Search />
+
       <Route path="/login" component={Login} />
-      <Route exact path="/userDashboard" component={Dashboard} />
+      <Route exact path="/" component={Homepage} />
       <Route path="/get-experience" component={MomSignupForm} />
       <Route path="/give-experience" component={HostSignupForm} />
     </ThemeProvider>

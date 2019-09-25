@@ -10,7 +10,7 @@ import {
   ButtonGroup
 } from "@chakra-ui/core";
 
-function Dashboard(props) {
+function Homepage(props) {
   return (
     <>
       <Box>
@@ -39,7 +39,16 @@ function Dashboard(props) {
           </Stack>
         </Box>
       </Box>
-      <Stack isInline spacing="40px" marginTop="300px" marginX="40px">
+      <Box marginTop="300px" marginX="40px">
+        <Heading as="h1" size="lg">
+          A - Z Experiences around Lagos
+        </Heading>
+        <Text>
+          Multi-day activities led by local experts—activities, meals, and stays
+          included
+        </Text>
+      </Box>
+      <Stack isInline spacing="40px" marginX="40px" marginTop="30px">
         <ExperienceCard
           title="Wakarusa"
           desc="Farm stay in Indiana Amish country"
@@ -66,4 +75,4 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+export default Homepage;
