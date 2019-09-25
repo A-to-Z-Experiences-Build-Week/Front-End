@@ -39,7 +39,13 @@ function Homepage(props) {
               >
                 Give Experience
               </Button>
-              <Button variantColor="teal" variant="outline" size="lg">
+              <Button
+                variantColor="teal"
+                variant="outline"
+                size="lg"
+                as={Link}
+                to="/get-experience"
+              >
                 Get Experience
               </Button>
             </ButtonGroup>
