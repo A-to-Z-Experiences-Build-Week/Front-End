@@ -21,9 +21,9 @@ function Nav(props) {
       <Box as={RouterLink} to="/contact-us">
         Contact us
       </Box>
-      <Box as={RouterLink} to="/dashboard">
+      {/* <Box as={RouterLink} to="/dashboard">
         Dashboard
-      </Box>
+      </Box> */}
     </Stack>
   );
 }

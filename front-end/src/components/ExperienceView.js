@@ -1,5 +1,21 @@
 import React from "react";
-import { Text, Flex, Image, Box, Icon, Stack, Grid } from "@chakra-ui/core";
+import {
+  Text,
+  Flex,
+  Image,
+  Box,
+  Icon,
+  Stack,
+  Button,
+  Grid,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  useDisclosure
+} from "@chakra-ui/core";
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
@@ -18,7 +34,41 @@ function IconText(props) {
   );
 }
 
+function ConfirmDialog(props) {
+  const { isOpen, cancelRef, onClose, onDelete } = props;
+  return (
+    <AlertDialog
+      isOpen={isOpen}
+      leastDestructiveRef={cancelRef}
+      onClose={onClose}
+    >
+      <AlertDialogOverlay />
+      <AlertDialogContent>
+        <AlertDialogHeader fontSize="lg" fontWeight="bold">
+          Delete Experience
+        </AlertDialogHeader>
+
+        <AlertDialogBody>
+          Are you sure? You can't undo this action afterwards.
+        </AlertDialogBody>
+
+        <AlertDialogFooter>
+          <Button ref={cancelRef} onClick={onClose}>
+            Cancel
+          </Button>
+          <Button variantColor="red" onClick={onDelete} ml={3}>
+            Delete
+          </Button>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}
+
 function ExperienceView(props) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
+
   return (
     <Flex>
       <Image
@@ -67,10 +117,20 @@ function ExperienceView(props) {
             place not busy. I have an affinity for stay at home moms and willing
             to let them experience food in a most relaxing atmosphere.
           </Text>
-          <Box paddingY="20px">
-            <Link marginLeft="30px">Edit</Link>
-            <Link marginLeft="40px">Delete</Link>
-          </Box>
+          <ConfirmDialog
+            isOpen={isOpen}
+            onClose={onClose}
+            cancelRef={cancelRef}
+            onDelete={() => {
+              console.log("Delete Experience");
+            }}
+          />
+          <Stack isInline shouldWrapChildren paddingY="20px">
+            <Link to="/add-experience">Edit</Link>
+            <Link onClick={onOpen} ref={cancelRef}>
+              Delete
+            </Link>
+          </Stack>
         </Box>
       </Box>
     </Flex>

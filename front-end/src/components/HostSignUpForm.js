@@ -6,9 +6,9 @@ function HostSignupForm(props) {
   return (
     <>
       <Box marginLeft="40px">
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center">
           <Stack spacing="16px" marginRight="40px">
-            <Text marginTop="200px" fontWeight="bold" fontSize="5xl">
+            <Text fontWeight="bold" fontSize="5xl">
               Hi there!
             </Text>
             <Text>
@@ -40,6 +40,7 @@ function HostSignupForm(props) {
             height="700px"
             maxWidth="600px"
             objectFit="cover"
+            display={{ sm: "none", md: "block" }}
           />
         </Flex>
       </Box>

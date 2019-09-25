@@ -13,10 +13,11 @@ function Header(props) {
           justify="space-between"
           paddingX="20px"
           align="center"
+          direction={{ sm: "column", md: "row" }}
         >
-          <Stack isInline spacing="40px">
+          <Stack width={{ sm: "100%", md: "auto" }} isInline spacing="40px">
             <Logo height="32px" />
-            <Search />
+            <Search width={{ sm: "100%", md: "auto" }} />
           </Stack>
 
           <Nav color="teal.600" />
