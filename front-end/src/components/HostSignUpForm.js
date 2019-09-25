@@ -18,13 +18,13 @@ function HostSignupForm(props) {
             then you’ll submit it to be reviewed by A to Z Experiences.
           </Text>
 
-        {/* {Need to make the next button active so it continues to the next section the form} */}
+          {/* {Need to make the next button active so it continues to the next section the form} */}
           <Button marginTop="30px" variantColor="teal" size="lg">
             Next
           </Button>
         </Box>
         <Image
-          src="https://images.unsplash.com/photo-1554731340-80eb1d6cec50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          src="https://images.unsplash.com/photo-1526277015674-026cb84653ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
           width="100%"
           height="700px"
           maxWidth="600px"
