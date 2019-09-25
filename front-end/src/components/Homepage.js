@@ -9,6 +9,7 @@ import {
   Button,
   ButtonGroup
 } from "@chakra-ui/core";
+import { Link } from "react-router-dom";
 
 function Homepage(props) {
   return (
@@ -29,7 +30,13 @@ function Homepage(props) {
           </Heading>
           <Stack>
             <ButtonGroup spacing={2} marginTop="80px">
-              <Button variantColor="teal" variant="solid" size="lg">
+              <Button
+                as={Link}
+                to="/give-experience"
+                variantColor="teal"
+                variant="solid"
+                size="lg"
+              >
                 Give Experience
               </Button>
               <Button variantColor="teal" variant="outline" size="lg">
