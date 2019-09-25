@@ -18,19 +18,13 @@ function App() {
   return (
     <ThemeProvider>
       <CSSReset />
-
-      <Text fontSize="3xl" color="teal.100" fontWeight="bold">
-        This is text
-      </Text>
-      <Nav bg="red.300" /> 
-      <Login />
-      {/* <ExperienceCard />
-      <ExperienceView /> 
-      <MomSignupForm /> 
-      <HostSignupForm />
-      <HostSignupForm2 />
-      <HostSignupForm3 />
-      <HostSignupForm4 /> */}
+      {/* <Nav bg="red.300" />  */}
+        <Header />
+        <Route path="/login" component={Login} />
+        <PrivateRoute exact path="/userDashboard" component={Dashboard} />
+        <Route path="/get-experience" component={MomSignupForm} />
+        <Route path="/give-experience" component={HostSignupForm} />
+    
     </ThemeProvider>
   );
 }
