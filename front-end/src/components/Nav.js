@@ -21,8 +21,8 @@ function Nav(props) {
       <Box as={RouterLink} to="/get-experience">
         Get Experience
       </Box>
-      <Box as={RouterLink} to="/contact-us">
-        Contact us
+      <Box as={RouterLink} to="/about-us">
+        About us
       </Box>
       {/* <Box as={RouterLink} to="/dashboard">
         Dashboard
