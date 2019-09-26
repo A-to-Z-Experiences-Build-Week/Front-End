@@ -1,8 +1,9 @@
 import React from "react";
 import { Heading, Box, Flex, Image } from "@chakra-ui/core";
-import MomSignupForm from "./MomSignupForm";
 
-function MomSignupPage(props) {
+import HostSignupForm4 from "./HostSignupForm4";
+
+function HostSignupPage(props) {
   return (
     <>
       <Box>
@@ -10,9 +11,9 @@ function MomSignupPage(props) {
           Sign up Form
         </Heading>
         <Flex justify="space-between" align="center">
-          <MomSignupForm onSubmit={values => alert(JSON.stringify(values))} />
+          <HostSignupForm4 onSubmit={values => alert(JSON.stringify(values))} />
           <Image
-            src="https://images.unsplash.com/photo-1554731340-80eb1d6cec50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+            src="https://images.unsplash.com/photo-1527707471127-c3ad5ea438d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80"
             width="100%"
             height="700px"
             maxWidth="600px"
@@ -25,4 +26,4 @@ function MomSignupPage(props) {
   );
 }
 
-export default MomSignupPage;
+export default HostSignupPage;

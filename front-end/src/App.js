@@ -21,6 +21,7 @@ import Dashboard from "./components/Dashboard";
 import HostSignupForm2 from "./components/HostSignupForm2";
 import HostSignupForm3 from "./components/HostSignupForm3";
 import HostSignupForm4 from "./components/HostSignupForm4";
+import HostSignupPage from "./components/HostSignupPage";
 // import HostSignupForm4 from "./components/HostSignupForm4";
 import MomSignupPage from "./components/MomSignupPage";
 import About from "./components/About";
@@ -42,7 +43,7 @@ function App() {
       {/* <Route path="/about-us" render={props => <About />} /> */}
       <Route path="/host-signup" component={HostSignupForm2} />
       <Route path="/host-signup2" component={HostSignupForm3} />
-      <Route path="/host-signup3" component={HostSignupForm4} />
+      <Route path="/host-signup3" component={HostSignupPage} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/add-experience" component={AddExperience} />
       <Route path="/add-experience2" component={AddExperience2} />

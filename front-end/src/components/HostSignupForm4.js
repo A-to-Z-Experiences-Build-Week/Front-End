@@ -1,71 +1,142 @@
 import React from "react";
 import {
-  Flex,
-  Stack,
   FormControl,
   FormLabel,
   Input,
-  Radio,
-  RadioGroup,
+  Stack,
   Button,
-  Image,
-  Box
+  FormErrorMessage
 } from "@chakra-ui/core";
-import { Link } from "react-router-dom";
+import * as Yup from "yup";
+import { Formik } from "formik";
+
+const validation = Yup.object().shape({
+  first_name: Yup.string().required(),
+  last_name: Yup.string().required(),
+  location: Yup.string().required(),
+  phone: Yup.string().required(),
+  email: Yup.string()
+    .email()
+    .required(),
+  password: Yup.string().required()
+});
+
+const initialValues = {
+  first_name: "",
+  last_name: "",
+  location: "",
+  phone: "",
+
+  email: "",
+  password: ""
+};
 
 function HostSignupForm4(props) {
+  const { onSubmit } = props;
   return (
-    <Box marginLeft="40px">
-      <Flex justify="space-between" align="center">
-        <Stack spacing="16px" width="100%" marginX="40px" marginTop="40px">
-          <FormControl>
-            <FormLabel htmlFor="fname">First name</FormLabel>
-            <Input type="text" id="fname" />
-          </FormControl>
-          <FormControl>
-            <FormLabel htmlFor="lname">Last name</FormLabel>
-            <Input type="text" id="lname" />
-          </FormControl>
-
-          <FormControl>
-            <FormLabel htmlFor="phone">Phone number</FormLabel>
-            <Input type="phone" id="phone" />
-          </FormControl>
-
-          <FormControl>
-            <FormLabel htmlFor="email">Email address</FormLabel>
-            <Input type="email" id="email" />
-          </FormControl>
-          <FormControl>
-            <FormLabel htmlFor="password">Password</FormLabel>
-            <Input type="password" id="password" />
-          </FormControl>
-          <FormControl>
-            <FormLabel htmlFor="cpassword">Confirm Password</FormLabel>
-            <Input type="password" id="cpassword" />
-          </FormControl>
-          <Button
-            as={Link}
-            to="/dashboard"
-            variantColor="teal"
-            variant="solid"
-            size="lg"
-            marginTop="30px"
-            width="200px"
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validation}
+      onSubmit={onSubmit}
+      render={props => {
+        return (
+          <Stack
+            as="form"
+            flex="1"
+            onSubmit={props.handleSubmit}
+            spacing="16px"
+            marginX="40px"
           >
-            Submit
-          </Button>
-        </Stack>
-        <Image
-          src="https://images.unsplash.com/photo-1527707471127-c3ad5ea438d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80"
-          width="100%"
-          height="700px"
-          maxWidth="600px"
-          objectFit="cover"
-          display={{ sm: "none", md: "block" }}
-        />
-      </Flex>
-    </Box>
+            <FormControl
+              isInvalid={props.errors.first_name && props.touched.first_name}
+            >
+              <FormLabel htmlFor="fname">First name</FormLabel>
+              <Input
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                value={props.values.first_name}
+                name="first_name"
+                type="text"
+                id="fname"
+              />
+              <FormErrorMessage>{props.errors.first_name}</FormErrorMessage>
+            </FormControl>
+
+            <FormControl
+              isInvalid={props.errors.last_name && props.touched.last_name}
+            >
+              <FormLabel htmlFor="lname">Last name</FormLabel>
+              <Input
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                value={props.values.last_name}
+                name="last_name"
+                type="text"
+                id="lname"
+              />
+              <FormErrorMessage>{props.errors.last_name}</FormErrorMessage>
+            </FormControl>
+            <FormControl
+              isInvalid={props.errors.location && props.touched.location}
+            >
+              <FormLabel htmlFor="location">Location</FormLabel>
+              <Input
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                value={props.values.location}
+                name="location"
+                type="text"
+                id="location"
+              />
+              <FormErrorMessage>{props.errors.location}</FormErrorMessage>
+            </FormControl>
+
+            <FormControl isInvalid={props.errors.phone && props.touched.phone}>
+              <FormLabel htmlFor="phone">Phone number</FormLabel>
+              <Input
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                value={props.values.phone}
+                name="phone"
+                type="phone"
+                id="phone"
+              />
+              <FormErrorMessage>{props.errors.phone}</FormErrorMessage>
+            </FormControl>
+
+            <FormControl isInvalid={props.errors.email && props.touched.email}>
+              <FormLabel htmlFor="email">Email address</FormLabel>
+              <Input
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                value={props.values.email}
+                name="email"
+                type="email"
+                id="email"
+              />
+              <FormErrorMessage>{props.errors.email}</FormErrorMessage>
+            </FormControl>
+            <FormControl
+              isInvalid={props.errors.password && props.touched.password}
+            >
+              <FormLabel htmlFor="password">Password</FormLabel>
+              <Input
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                value={props.values.password}
+                name="password"
+                type="password"
+                id="password"
+              />
+              <FormErrorMessage>{props.errors.password}</FormErrorMessage>
+            </FormControl>
+            <Button type="submit" variantColor="teal" size="lg" width="100px">
+              Submit
+            </Button>
+          </Stack>
+        );
+      }}
+    />
   );
 }
 
