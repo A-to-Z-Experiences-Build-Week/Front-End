@@ -22,7 +22,8 @@ import {
   FaRegClock,
   FaUserFriends
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@chakra-ui/core";
 
 function IconText(props) {
   const { icon, children, ...rest } = props;
@@ -77,6 +78,7 @@ function ExperienceView(props) {
         height="700px"
         maxWidth="600px"
         objectFit="cover"
+        display={{ sm: "none", md: "block" }}
       />
       <Box marginLeft="40px" marginTop="10px">
         <Text fontSize="xs">Have plenty of fun</Text>
@@ -126,8 +128,15 @@ function ExperienceView(props) {
             }}
           />
           <Stack isInline shouldWrapChildren paddingY="20px">
-            <Link to="/add-experience">Edit</Link>
-            <Link onClick={onOpen} ref={cancelRef}>
+            <Link as="RouterLink" to="/add-experience" color="teal.500">
+              Edit
+            </Link>
+            <Link
+              as="RouterLink"
+              onClick={onOpen}
+              ref={cancelRef}
+              color="red.500"
+            >
               Delete
             </Link>
           </Stack>
