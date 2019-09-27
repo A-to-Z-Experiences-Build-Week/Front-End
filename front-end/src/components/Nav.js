@@ -6,24 +6,27 @@ import { Link } from "@chakra-ui/core";
 function Nav(props) {
   return (
     <Stack isInline spacing="40px" padding="10px" justify="flex-end" {...props}>
-      <Link as={RouterLink} to="/">
+      {/* <Link as={RouterLink} to="/">
         Home
-      </Link>
-      <Link as={RouterLink} to="/login">
+      </Link> */}
+      <Box as={RouterLink} to="/">
+        Home
+      </Box>
+      {/* <Link as={RouterLink} to="/login">
         Login
-      </Link>
+      </Link> */}
       <Box as={RouterLink} to="/give-experience">
         Give Experience
       </Box>
       <Box as={RouterLink} to="/get-experience">
         Get Experience
       </Box>
-      <Box as={RouterLink} to="/contact-us">
-        Contact us
+      <Box as={RouterLink} to="/about-us">
+        About us
       </Box>
-      <Box as={RouterLink} to="/dashboard">
+      {/* <Box as={RouterLink} to="/dashboard">
         Dashboard
-      </Box>
+      </Box> */}
     </Stack>
   );
 }

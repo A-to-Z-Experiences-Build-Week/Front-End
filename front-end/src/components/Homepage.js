@@ -7,7 +7,8 @@ import {
   Heading,
   Stack,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Grid
 } from "@chakra-ui/core";
 import { Link } from "react-router-dom";
 
@@ -61,7 +62,12 @@ function Homepage(props) {
           included
         </Text>
       </Box>
-      <Stack isInline spacing="40px" marginX="40px" marginTop="30px">
+      <Grid
+        templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(5, 1fr)" }}
+        gap="40px"
+        marginX="40px"
+        marginTop="30px"
+      >
         <ExperienceCard
           title="Wakarusa"
           desc="Farm stay in Indiana Amish country"
@@ -83,7 +89,7 @@ function Homepage(props) {
         <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
-      </Stack>
+      </Grid>
     </>
   );
 }
